@@ -2,6 +2,8 @@
 var numCpus = require('os').cpus().length
 var cluster = require('cluster')
 
+console.log(numCpus)
+
 cluster.setupMaster({exec: __dirname + '/server.js'})
 
 // workerIds returns the node cluster index for each worker
